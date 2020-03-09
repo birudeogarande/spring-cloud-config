@@ -1,4 +1,11 @@
 spring:
+  security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8182/oauth/check_token
+    client:
+      client-id: web
+      client-secret: webpass
   h2:
     console:
       enabled: true
@@ -19,7 +26,3 @@ spring:
     url: jdbc:h2:mem:testdb 
     platform: org.hibernate.dialect.H2Dialect
 
-service: 
-  msg: from service dev
-  id: 123344
-  
