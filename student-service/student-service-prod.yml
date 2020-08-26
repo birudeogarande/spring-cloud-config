@@ -1,0 +1,4 @@
+service: 
+  msg: from service production
+  id: 81878187
+  
