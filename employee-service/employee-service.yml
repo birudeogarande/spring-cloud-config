@@ -1,0 +1,32 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/employee-db
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+  application:
+    name: EMPLOYEE-SERVICE
+  cloud:
+    config:
+      uri: http://localhost:8888
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
