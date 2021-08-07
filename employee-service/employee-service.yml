@@ -25,6 +25,9 @@ spring:
     config:
       uri: http://localhost:8888
       enabled: true
+  config:
+    import: "optional:configserver:"
+
 management:
   endpoints:
     web:
