@@ -20,7 +20,7 @@ spring:
       client:
         url: http://localhost:9090
   application:
-    name: employee-service
+    name: department-service
 management:
   endpoints:
     web:
