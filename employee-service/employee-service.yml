@@ -20,7 +20,7 @@ spring:
       client:
         url: http://localhost:9090
   application:
-    name: EMPLOYEE-SERVICE
+    name: employee-service
   cloud:
     config:
       uri: http://localhost:8888
