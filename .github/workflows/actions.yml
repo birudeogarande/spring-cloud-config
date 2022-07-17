@@ -19,4 +19,9 @@ jobs:
         java-version: 14
 
     - name: Build project with Maven
-      run: mvn install
+    - run: mvn --batch-mode --update-snapshots verify
+    - run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v3
+      with:
+       name: Package
+       path: staging
